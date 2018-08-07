@@ -12,5 +12,5 @@ def ano_bissexto(ano):
         #     return True
         # else:
         #     return False
-        return not bool(ano%400 or ano%100 or ano%4)
+        return not bool(ano%400 or (ano%4 and not ano%100))
     return False
