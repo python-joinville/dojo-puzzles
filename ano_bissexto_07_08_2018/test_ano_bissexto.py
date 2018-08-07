@@ -14,4 +14,3 @@ def test_ano_400():
     for i in range(10):
         resultado = ano_bissexto(i*400)
         assert resultado
-    
