@@ -16,6 +16,7 @@ import pytest
     (-1, False),
     (-4, False),
     (-400, False),
+    ("-400", False),
 ])
 def test_ano_eh_bissexto(ano, esperado):
     resultado = ano_bissexto(ano)

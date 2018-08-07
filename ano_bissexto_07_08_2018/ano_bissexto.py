@@ -1,5 +1,8 @@
 
 def ano_bissexto(ano):
+    if type(ano) is not int:
+        return False
+
     if ano < 0:
         return False
     elif ano % 400 == 0:
