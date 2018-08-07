@@ -2,40 +2,17 @@ from ano_bissexto import ano_bissexto
 import pytest
 
 
-def test_ano_recebe_1600_eh_bissexto():
-    resultado = ano_bissexto(1600)
-    assert resultado
-
 @pytest.mark.parametrize("ano,esperado", [
-    (1600, True)
+    (1600, True),
+    (1732, True),
+    (1888, True),
+    (1742, False),
+    (1889, False),
+    (1500, False),
 ])
-def test_ano_eh_bissexto(ano,esperado):
+def test_ano_eh_bissexto(ano, esperado):
     resultado = ano_bissexto(ano)
     assert esperado == resultado
-
-
-def test_ano_recebe_1732_eh_bissexto():
-    resultado = ano_bissexto(1732)
-    assert resultado
-
-
-def test_ano_recebe_1888_eh_bissexto():
-    resultado = ano_bissexto(1888)
-    assert resultado
-
-
-def test_ano_recebe_1742_nao_eh_bissexto():
-    resultado = ano_bissexto(1742)
-    assert not resultado
-
-
-def test_ano_recebe_1889_nao_eh_bissexto():
-    resultado = ano_bissexto(1889)
-    assert not resultado
-
-def test_ano_recebe_1500_nao_eh_bissexto():
-    resultado = ano_bissexto(1500)
-    assert not resultado
 
 
 def test_ano_400():
