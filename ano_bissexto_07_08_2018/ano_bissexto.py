@@ -1,16 +1,12 @@
 
 
 def ano_bissexto(ano):
-    if type(ano) is int:
-        if ano < 0:
-            return False
-        # elif ano % 400 == 0:
-        #     return True
-        # elif ano % 100 == 0:
-        #     return False
-        # elif ano % 4 == 0:
-        #     return True
-        # else:
-        #     return False
-        return not bool(ano%400 and (ano%4 and not ano%100))
+    if type(ano) is int and ano >= 0:
+        return bool(eh_divisivel(ano, 400) or (
+                        eh_divisivel(ano, 4) and
+                        not eh_divisivel(ano, 100))))
     return False
+
+
+def eh_divisivel(numero, outro_numero):
+    return not numero % outro_numero
