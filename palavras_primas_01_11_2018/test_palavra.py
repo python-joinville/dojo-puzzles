@@ -1,25 +1,15 @@
 from palavra_prima import palavra_prima
+import pytest
 
-def test_palavra_a_retorna_true():
-    esperado = palavra_prima('a')
-    assert esperado
-
-def test_palavra_ab_retorna_true():
-    esperado = palavra_prima('ab')
-    assert esperado
-
-def test_palabra_abc_retorna_false():
-    esperado = palavra_prima('abc')
-    assert not esperado
-
-def test_palabra_d_retorna_false():
-    esperado = palavra_prima('d')
-    assert not esperado
-
-def test_palavra_af_retorna_true():
-    esperado = palavra_prima('af')
-    assert esperado
-
-def test_palavra_ef_retorna_true():
-    esperado = palavra_prima('ef')
-    assert esperado
+@pytest.mark.parametrize("test_input,expected", [
+    ("a", True),
+    ("ab", True),
+    ("abc", False),
+    ("d", False),
+    ("af", True),
+    ("fe", True),
+    ("xyyya", True),
+])
+def test_palavra(test_input, expected):
+    esperado = palavra_prima(test_input)
+    assert esperado == expected
