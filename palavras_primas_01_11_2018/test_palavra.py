@@ -8,7 +8,7 @@ import pytest
     ("d", False),
     ("af", True),
     ("fe", True),
-    ("xyyya", True),
+    ("xyyy", False),
 ])
 def test_palavra(test_input, expected):
     esperado = palavra_prima(test_input)
