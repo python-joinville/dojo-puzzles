@@ -19,3 +19,7 @@ def test_palabra_d_retorna_false():
 def test_palavra_af_retorna_true():
     esperado = palavra_prima('af')
     assert esperado
+
+def test_palavra_ef_retorna_true():
+    esperado = palavra_prima('ef')
+    assert esperado
