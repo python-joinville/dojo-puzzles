@@ -11,6 +11,7 @@ import pytest
     ('8', 't'),    
     ('9', 'w'),
     ('0', ' '),
+    ('234', 'adg'),
 ])
 def test_converte_num_digito(digito, expected):
     resultado = converte_num_letra(digito)

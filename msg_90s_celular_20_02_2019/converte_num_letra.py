@@ -10,6 +10,9 @@ tabela = {'2':'a',
 
 }
 
-def converte_num_letra(digito):
-    return tabela[digito]
+def converte_num_letra(digitos):
+    sequencia = []
+    for digito in digitos:
+        sequencia.append(tabela[digito])
+    return sequencia
 
