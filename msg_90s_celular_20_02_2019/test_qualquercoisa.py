@@ -8,6 +8,8 @@ def test_imprime_d():
     resultado = converte_num_letra('3')
     assert resultado == 'd'
 
-def test_imprime_b():
-    resultado = converte_num_letra('22')
-    assert resultado == 'b'
+def test_imprime_j():
+    assert converte_num_letra('5') == 'j'
+
+def test_imprime_g():
+    assert converte_num_letra('4') == 'g'
