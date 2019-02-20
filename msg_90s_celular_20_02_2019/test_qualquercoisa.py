@@ -13,3 +13,6 @@ def test_imprime_j():
 
 def test_imprime_g():
     assert converte_num_letra('4') == 'g'
+
+def test_imprime_m():
+    assert converte_num_letra('6') == 'm'
