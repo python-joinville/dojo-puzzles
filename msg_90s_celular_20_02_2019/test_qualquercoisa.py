@@ -1,4 +1,13 @@
 from converte_num_letra import converte_num_letra
+import pytest
+
+@pytest.mark.parametrize("digito,expected", [
+    ("2", 'a'),
+    
+])
+def test_eval(digito, expected):
+    resultado = converte_num_letra(digito)
+    assert resultado == expected
 
 def test_imprime_a():
     resultado = converte_num_letra('2')
@@ -16,3 +25,4 @@ def test_imprime_g():
 
 def test_imprime_m():
     assert converte_num_letra('6') == 'm'
+
