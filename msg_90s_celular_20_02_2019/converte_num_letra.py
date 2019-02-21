@@ -15,8 +15,8 @@ def converte_num_letra(digitos):
     sequencia = ''
     for digito in digitos:
         if letra != '' and digito != letra:
-            palavra = palavra + tabela[sequencia] 
+            palavra = palavra + tabela[digito] 
         elif digito == letra:      
             sequencia += digito
-        palavra = palavra + tabela[sequencia]
+        palavra = palavra + tabela[digito]
     return palavra
