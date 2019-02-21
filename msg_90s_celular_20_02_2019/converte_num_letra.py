@@ -10,13 +10,15 @@ tabela = {'2': ['a', 'b', 'c']
 }
 
 def converte_num_letra(digitos):
-    letra = palavra
+    palavra = ''
+    letra = ''
     ocorrencia = 0
     for digito in digitos:
         if ocorrencia == 0:
-            letra = digito 
-        if digito == letra
-            
-        palavra = palavra + tabela[digito]
-        ocorrencia =+ 1
+            letra = digito
+            palavra = tabela[digito][ocorencia] 
+        elif digito == letra:
+            palavra = tabela[digito][ocorencia]  
+        # palavra = palavra + tabela[digito]
+        ocorencia =+ 1
     return palavra
