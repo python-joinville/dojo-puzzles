@@ -11,8 +11,7 @@ tabela = {'2':'a',
 }
 
 def converte_num_letra(digitos):
-    sequencia = []
+    palavra = ''
     for digito in digitos:
-        sequencia.append(tabela[digito])
-    return sequencia
-
+        palavra = palavra + tabela[digito]
+    return palavra

@@ -12,6 +12,7 @@ import pytest
     ('9', 'w'),
     ('0', ' '),
     ('234', 'adg'),
+    ('3450', 'dgj ')
 ])
 def test_converte_num_digito(digito, expected):
     resultado = converte_num_letra(digito)
